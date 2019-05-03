@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  #get 'helloworld', to: 'welcome#index'
+  resources :authors  do #, only: [:create,:show]  #por cada modelo
+    resources :books
+    end
 end
